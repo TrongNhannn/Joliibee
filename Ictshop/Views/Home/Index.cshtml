@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Jollibee";
+    
+}
+
+
+<br />
+<div class="row">
+    <div class="col">
+       @Html.Action("SlidePartial","Home")
+    </div>
+    
+</div>
+<br />
+<div class="spnoibat">
+    <h3> SẢN PHẨM NỔI BẬT</h3>
+   
+        <table>
+
+            <tr>
+                <th scope="col"><img src="~/HinhanhSP/bur4.jpg" class="img-responsive" alt="" width="200px" /></th>
+                <th scope="col"><img src="~/HinhanhSP/sp2.png" class="img-responsive" alt="" width="200px" /></th>
+                <th scope="col"><img src="~/HinhanhSP/tm3.png" class="img-responsive" alt="" width="200px" /></th>
+                <th scope="col"><img src="~/HinhanhSP/tm6.png" class="img-responsive" alt="" width="200px" /></th>
+                <th scope="col"><img src="~/HinhanhSP/bur5.png" class="img-responsive" alt="" width="200px" /></th>
+                <th scope="col"><img src="~/HinhanhSP/sp2.png" class="img-responsive" alt="" width="200px" /></th>
+                <th scope="col"><img src="~/HinhanhSP/tm5.png" class="img-responsive" alt="" width="200px" />
+                </th><th scope="col"><img src="~/HinhanhSP/gagion6.png" class="img-responsive" alt="" width="200px" /></th>
+            </tr>
+
+
+        </table>
+        
+       
+</div>
+
+
+
+
+<div class="danhmuc">
+    @Html.Action("DanhmucPartial", "Danhmuc")
+</div>
+<div class="dt">
+    @Html.Action("GagionPartial", "Sanpham")
+</div>
+<div class="dt">
+    @Html.Action("GavacomPartial", "Sanpham")
+   
+</div>
+<div class="dt">
+    @Html.Action("MiYPartial", "Sanpham")
+
+</div>
+
+<div class="dt">
+
+    @Html.Action("TrangmiengPartial", "Sanpham")
+</div>
+
+

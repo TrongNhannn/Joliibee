@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Ictshop.Models.Tintuc>
+
+
+@{
+    ViewBag.Title = "Tin tức-Khuyến mãi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />   @foreach (var item in Model)
+{
+    <div class="col-md-3 col-sm-6">
+        <a href="@Url.Action("Chitiet", new {@Id=item.Id })">
+            <img src=@Url.Content("~/HinhanhSP/"+item.Hinhanh) style="padding:5px" alt="" width="300" height="300" />
+            <h3>@item.Tieude</h3>
+        </a>
+
+    </div>
+}
+<div style="padding:400px">
+     </div>
+       

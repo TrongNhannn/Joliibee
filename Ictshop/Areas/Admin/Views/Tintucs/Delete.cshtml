@@ -1,0 +1,47 @@
+﻿@model Ictshop.Models.Tintuc
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h2>Delete</h2>
+<h3>Bạn có muốn xóa tin này?</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tieude)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tieude)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Noidung)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Noidung)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Hinhanh)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Hinhanh)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MaNguoidung)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaNguoidung)
+        </dd>
+    </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại", "Index")
+        </div>
+    }
+</div>

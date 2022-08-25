@@ -1,0 +1,56 @@
+﻿
+@model IEnumerable<Ictshop.Models.Tintuc>
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    <h2>Quản lý Tin tức</h2>
+    <p>
+        @Html.ActionLink("Thêm tin", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                Mã tin
+            </th>
+            <th>
+                Tiêu đề
+            </th>
+            <th>
+                Nội dung
+            </th>
+            <th>
+                Hình ảnh
+            </th>
+          
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tieude)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Noidung)
+                </td>
+                <td>
+                    <img src="@Url.Content("~/HinhanhSP/" +item.Hinhanh)" width="50" height="50" />
+                    @*@Html.DisplayFor(modelItem => item.Anhbia)*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaNguoidung)
+                </td>
+               
+               
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.Id }) |
+                 
+                    @Html.ActionLink("Xoá", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </table>
+

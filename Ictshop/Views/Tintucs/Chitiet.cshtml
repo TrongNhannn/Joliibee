@@ -1,0 +1,32 @@
+﻿@using Ictshop.Models
+@model Tintuc
+
+
+@{
+    ViewBag.Title = "Chi tiết tin tức";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<style> h2{
+    font-size: 30px
+
+ }
+    img.cangiua {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<div class="grid">
+    <h2 style="text-align:center">@Model.Tieude</h2>
+    <div class="g-col-6">
+        <img src="@Url.Content("~/HinhanhSP/" +@Model.Hinhanh)" class="cangiua" alt="" width="200" height="200" />
+        <p style="padding:20px">@Model.Noidung</p>
+    </div>
+    <p style="text-align:right"><b>Người đăng:@Model.Nguoidung.Hoten</b></p>
+    
+</div>
+<div>
+    @Html.ActionLink("Quay lại", "Index")
+</div>
+  
